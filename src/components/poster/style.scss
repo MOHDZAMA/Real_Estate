@@ -1,0 +1,60 @@
+.poster {
+  width: 100vw;
+  height: 500px;
+  background: url("https://images.pexels.com/photos/17158664/pexels-photo-17158664/free-photo-of-residential-building-with-driveway.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .poster-content {
+    width: 70%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      color: white;
+      font-size: 26px;
+      line-height: 36px;
+      font-weight: bold;
+      font-family: "Ivar Headline", "Ivar Headline Subset", "Adjusted Times",
+        "Adjusted Times New Roman", "Times New Roman", serif;
+
+      margin-bottom: 20px;
+      white-space: nowrap;
+    }
+    input {
+      max-width: 100%;
+      min-width: 360px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+
+      padding: 0 20px;
+    }
+  }
+  .shadow {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(
+      180deg,
+      rgba(180, 174, 174, 0) 0%,
+      #fffffffc 70%
+    );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .poster {
+    width: 100vw;
+    height: 400px;
+  }
+}

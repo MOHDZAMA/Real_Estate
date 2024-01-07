@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(237, 235, 235);
+  height: 60px;
+  .header-left {
+    margin-left: 20px;
+    img {
+      width: 160px;
+      height: 40px;
+    }
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    height: 60px;
+    span {
+      font-size: 17px;
+      font-family: "Gill sans", sans-serif;
+      margin-right: 15px;
+      height: 20px;
+
+      &:hover {
+        cursor: pointer;
+
+        text-decoration: underline;
+        text-decoration-color: rgb(50, 88, 224);
+        color: rgb(50, 88, 224);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+      }
+    }
+    span:nth-child(3) {
+      border: 1px solid rgb(50, 88, 224);
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+}

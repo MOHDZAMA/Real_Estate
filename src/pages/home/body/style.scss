@@ -1,0 +1,92 @@
+.body {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  flex-direction: column;
+  .body-top {
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    .body-top-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+      min-width: 400px;
+
+      font-family: "Gill Sans";
+      span:nth-child(1) {
+        font-size: 20px;
+        color: #1c1d1d;
+        font-weight: bold;
+      }
+      span {
+        font-size: 20px;
+        color: #666;
+      }
+      button {
+        width: 120px;
+        height: 40px;
+        border-color: #0071c2;
+        color: #0071c2;
+        border-radius: 5px;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    }
+    .body-top-right {
+      img {
+        height: 390px;
+        width: 550px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-left: 20px;
+        opacity: 0.7;
+      }
+    }
+  }
+  .body-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    .card {
+      height: 500px;
+      width: 400px;
+      margin: 10px;
+      //   border: 3px solid #0071c2;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      img {
+        height: 200px;
+        width: 300px;
+      }
+      span {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      button {
+        height: 40px;
+        border-color: #0071c2;
+        color: #0071c2;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .body-top-right {
+    display: none;
+  }
+}
