@@ -1,0 +1,33 @@
+.detail {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 20px 10px 20px;
+  //   width: 100%;
+  //   height: 100%;
+
+  .detail-t {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .detail-m {
+    display: flex;
+    justify-content: space-between;
+    // margin: 10px;
+    // flex-direction: column;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    .detail-m-l {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .detail-b {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}

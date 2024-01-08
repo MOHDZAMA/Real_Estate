@@ -1,0 +1,44 @@
+.explore {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px;
+
+  .explore-c {
+    width: 350px;
+    height: 300px;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    border-radius: 5px;
+    &:hover {
+      cursor: pointer;
+      scale: 1.03;
+      transition: all 0.3s ease-in-out;
+    }
+    img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+    }
+    .explore-c-m {
+      display: flex;
+      justify-content: space-between;
+      padding: 3px;
+      .explore-c-m-l {
+        flex: 0.8;
+      }
+      .explore-c-m-r {
+        flex: 0.2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 5px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

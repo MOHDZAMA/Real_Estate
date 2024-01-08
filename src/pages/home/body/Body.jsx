@@ -1,7 +1,11 @@
 import React from "react";
 import "./style.scss";
 
+import { useNavigate } from "react-router-dom";
+
 function Body() {
+  const navigate = useNavigate();
+
   return (
     <div className="body">
       <div className="body-top">
@@ -30,7 +34,7 @@ function Body() {
             <br /> experience and the most listings,
             <br /> including things you won’t find anywhere else.
           </p>
-          <button>Browse homes</button>
+          <button onClick={() => navigate("/explore")}>Browse homes</button>
         </div>
         <div className="card">
           <img
@@ -43,7 +47,7 @@ function Body() {
             <br /> – from shopping on the largest rental
             <br /> network, to applying, to paying rent.
           </p>
-          <button>Find rentals</button>
+          <button onClick={() => navigate("/explore")}>Find rentals</button>
         </div>
       </div>
     </div>
