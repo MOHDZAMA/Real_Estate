@@ -34,7 +34,13 @@ function Body() {
             <br /> experience and the most listings,
             <br /> including things you won’t find anywhere else.
           </p>
-          <button onClick={() => navigate("/explore")}>Browse homes</button>
+          <button
+            onClick={() =>
+              navigate("/explore", { state: { purpose: "for-sale" } })
+            }
+          >
+            Browse homes
+          </button>
         </div>
         <div className="card">
           <img
@@ -47,7 +53,13 @@ function Body() {
             <br /> – from shopping on the largest rental
             <br /> network, to applying, to paying rent.
           </p>
-          <button onClick={() => navigate("/explore")}>Find rentals</button>
+          <button
+            onClick={() =>
+              navigate("/explore", { state: { purpose: "for-sale" } })
+            }
+          >
+            Find rentals
+          </button>
         </div>
       </div>
     </div>
