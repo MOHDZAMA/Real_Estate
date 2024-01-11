@@ -6,13 +6,11 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import useFetch from "../../components/hooks/useFetch";
 
-function Explore(purpose) {
+function Explore() {
   const navigate = useNavigate();
   const location = useLocation();
 
   const ls = location.state;
-
-  console.log(purpose);
 
   const [paramData, setParamData] = useState({
     locationExternalIDs: "5002,6020",
@@ -27,19 +25,17 @@ function Explore(purpose) {
   const updateParamData = (name, value) => {
     setParamData((paramData) => ({ ...paramData, [name]: value }));
   };
-  console.log(paramData);
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location]);
+  }, [location, data]);
 
-  console.log(paramData);
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
   return (
     <>
-      <Filterbar updateParamData={updateParamData} />
+      <Filterbar
+        updateParamData={updateParamData}
+        purpose={paramData.purpose}
+      />
       {!loading ? (
         <div className="explore">
           {data?.hits?.map(
@@ -69,7 +65,9 @@ function Explore(purpose) {
                 <div className="explore-c-m">
                   <div className="explore-c-m-l">
                     {isVerified && <span>y</span>}
-                    <span>{`${price}/${rentFrequency}`}</span>
+                    <span>{`AED ${price}${
+                      rentFrequency ? "/" + rentFrequency : ""
+                    }`}</span>
                     <div>
                       <span>{`${baths} | `}</span>
                       <span>{`${area.toFixed(1)} | `}</span>
@@ -85,8 +83,10 @@ function Explore(purpose) {
             )
           )}
         </div>
+      ) : error ? (
+        <div>Error: {error.message}</div>
       ) : (
-        "loading"
+        <div>Loading...</div>
       )}
     </>
   );

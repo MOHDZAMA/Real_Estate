@@ -14,12 +14,14 @@ const useFetch = (url, params) => {
       .then((res) => {
         setLoading(false);
         setData(res);
+        console.log("url", url);
+        console.log("params", params);
       })
       .catch((err) => {
         setLoading(false);
         setError("Something went wrong!" + err);
       });
-  }, [url]);
+  }, [url, params]);
 
   return { data, loading, error };
 };
