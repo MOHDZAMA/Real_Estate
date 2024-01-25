@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = "https://bayut.p.rapidapi.com";
-const TOKEN = "daef5ef785msha0b5f99402cc0b3p1f4d7djsn054165e0daf7";
+const TOKEN = import.meta.env.VITE_APP_REALESTATE_TOKEN;
 
 export const fetchDataFromApi = async (url, params) => {
   try {
